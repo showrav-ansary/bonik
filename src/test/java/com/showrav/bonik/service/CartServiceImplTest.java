@@ -46,17 +46,7 @@ public class CartServiceImplTest {
 	private static final Product TEST_PRODUCT
 					= new Product(1L, "Test Product", "Test Description", BigDecimal.valueOf(33.99));
 
-	@Before
-	public void setUp() throws Exception {
-		MockitoAnnotations.initMocks(this);
-		cartService = new CartServiceImpl(cartRepository, productRepository, cartItemRepository, transactionTemplate);
 
-		cart = new Cart();
-
-		testUser = new User();
-		testUser.setUsername("TEST_USER");
-		cart.setUser(testUser);
-	}
 
 	@Test
 	public void testGetCartByUser_givenNullUser_shouldThrowIllegalArgumentException() {

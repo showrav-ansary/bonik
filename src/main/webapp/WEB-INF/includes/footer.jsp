@@ -1,6 +1,6 @@
 <footer class="footer mt-auto py-3">
     <div class="container">
-        <span class="text-muted">Copyright &copy; eShoppers.com 2020</span>
+        <span class="text-muted">Copyright &copy; Bonik 2021</span>
     </div>
 </footer>
 

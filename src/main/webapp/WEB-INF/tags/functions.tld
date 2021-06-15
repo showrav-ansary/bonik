@@ -8,14 +8,14 @@
 
     <tlib-version>1.0</tlib-version>
     <short-name>ln</short-name>
-    <uri>http://bazlur.com/functions</uri>
+    <uri>http://showrav.com/functions</uri>
     <function>
         <name>getCurrentUser</name>
         <function-class>
             com.showrav.bonik.util.SecurityContext
         </function-class>
         <function-signature>
-            com.bazlur.eshoppers.domain.User getCurrentUser(javax.servlet.http.HttpServletRequest)
+            com.showrav.bonik.domain.User getCurrentUser(javax.servlet.http.HttpServletRequest)
         </function-signature>
     </function>
     <function>

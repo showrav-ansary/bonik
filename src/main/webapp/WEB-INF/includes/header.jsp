@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>eShoppers </title>
+    <title>Bonik</title>
     <link rel="stylesheet" type="text/css"
           href="<c:url value="/webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>"/>
 </head>
