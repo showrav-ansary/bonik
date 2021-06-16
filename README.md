@@ -13,5 +13,5 @@ Email : showrav.ansary.bd@gmail.com
 * Development Kits : openJDK 16.xx/OracleJDK 16.xx, Jakarta9
 * Development Tools : IntelliJ
 * Server : Apache Tomcat
-* Dependencies : Gradle 6.xx
+* Dependencies : Gradle 7.1
 * Database Server : MySQL/MariaDB
