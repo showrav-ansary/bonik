@@ -10,8 +10,8 @@ Email : showrav.ansary.bd@gmail.com
 ## Development Environment
 
 * OS : Any (Linux based OS recommended)
-* Development Kits : openJDK 16.xx/OracleJDK 16.xx, Jakarta9
+* Development Kits : openJDK 16/OracleJDK 16, Jakarta9
 * Development Tools : IntelliJ
-* Server : Apache Tomcat
+* Server : Apache Tomcat 9.xx
 * Dependencies : Gradle 7.1
 * Database Server : MySQL/MariaDB
