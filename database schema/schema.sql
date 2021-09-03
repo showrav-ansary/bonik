@@ -1,5 +1,7 @@
 create schema bonik collate utf8mb4_0900_ai_ci;
 
+use bonik;
+
 create table product
 (
 	id bigint auto_increment
