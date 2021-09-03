@@ -1,4 +1,4 @@
-<%@ taglib prefix="sec" uri="http://showrav.com/functions" %>
+<%@ taglib prefix="sec" uri="showrav.com/functions" %>
 <%@include file="includes/header.jsp" %>
 <%@include file="includes/navigation.jsp" %>
 

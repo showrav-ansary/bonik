@@ -1,4 +1,4 @@
-<%@ taglib prefix="sec" uri="http://showrav.com/functions" %>
+<%@ taglib prefix="sec" uri="showrav.com/functions" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="<c:url value="/"/>">e-Shoppers</a>
