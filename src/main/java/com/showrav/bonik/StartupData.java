@@ -69,58 +69,31 @@ public class StartupData implements CommandLineRunner {
         category2.setId(2);
         category2.setCategoryName("Books");
 
-        Category category3 = new Category();
-        category3.setId(3);
-        category3.setCategoryName("Electronics");
-
-        Category category4 = new Category();
-        category4.setId(4);
-        category4.setCategoryName("Arts");
-
         categoryRepository.save(category1);
         categoryRepository.save(category2);
-        categoryRepository.save(category3);
-        categoryRepository.save(category4);
+
     }
 
     private void exampleProducts(){
-        final String NAME = "Example Name";
-        final String IMAGE_URL = "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7389458.jpg";
-        final String DESCRIPTION = "Example Description";
-        final BigDecimal PRICE = BigDecimal.valueOf(1000);
-
         Product product1 = new Product();
         Product product2 = new Product();
-        Product product3 = new Product();
-        Product product4 = new Product();
 
-        product1.setName(NAME);
-        product1.setImageUrl(IMAGE_URL);
-        product1.setDescription(DESCRIPTION);
+        product1.setName("Horizon Hero Dawn");
+        product1.setImageUrl("https://upload.wikimedia.org/wikipedia/en/9/93/Horizon_Zero_Dawn.jpg");
+        product1.setDescription("PS Game");
         product1.setCategory(categoryRepository.findByCategoryName("Games"));
-        product1.setPrice(PRICE);
+        product1.setPrice(BigDecimal.valueOf(4000));
 
-        product2.setName(NAME);
-        product2.setImageUrl(IMAGE_URL);
-        product2.setDescription(DESCRIPTION);
+        product2.setName("Programming Contest : Data Structure and Algorithms");
+        product2.setImageUrl("https://raw.githubusercontent.com/showrav-ansary/Programming-Contest-Data-Structure-and-Algorithm-by-Md.-Mahbubul-Hasan/main/Cover.png");
+        product2.setDescription("Programming Contest Book");
         product2.setCategory(categoryRepository.findByCategoryName("Books"));
-        product2.setPrice(PRICE);
+        product2.setPrice(BigDecimal.valueOf(300));
 
-        product3.setName(NAME);
-        product3.setImageUrl(IMAGE_URL);
-        product3.setDescription(DESCRIPTION);
-        product3.setCategory(categoryRepository.findByCategoryName("Electronics"));
-        product3.setPrice(PRICE);
 
-        product4.setName(NAME);
-        product4.setImageUrl(IMAGE_URL);
-        product4.setDescription(DESCRIPTION);
-        product4.setCategory(categoryRepository.findByCategoryName("Arts"));
-        product4.setPrice(PRICE);
 
         productService.save(product1);
         productService.save(product2);
-        productService.save(product3);
-        productService.save(product4);
+
     }
 }
