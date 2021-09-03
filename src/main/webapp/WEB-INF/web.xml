@@ -24,7 +24,7 @@
                 showrav.com/functions
             </taglib-uri>
             <taglib-location>
-                webapp/WEB-INF/tags/functions.tld
+               tags/functions.tld
             </taglib-location>
         </taglib>
     </jsp-config>
