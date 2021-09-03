@@ -1,13 +1,11 @@
 package com.showrav.bonik.service;
 
 import com.showrav.bonik.domain.User;
-import com.showrav.bonik.dto.LoginDTO;
-import com.showrav.bonik.dto.UserDTO;
 
 public interface UserService {
-	void saveUser(UserDTO userDTO);
-
-	boolean isNotUniqueUsername(UserDTO user);
-
-	User verifyUser(LoginDTO loginDTO);
+    void save(User user);
+    void login(String username, String password);
+    User findByUsername(String username);
+    User findByEmail(String email);
+    User findById(long id);
 }

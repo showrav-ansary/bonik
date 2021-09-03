@@ -1,59 +1,60 @@
 package com.showrav.bonik.domain;
 
+import lombok.Data;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Product extends Domain {
-	private String name;
-	private String description;
-	private BigDecimal price;
+@Data
+@Entity
+@Table(name = "product")
+public class Product {
 
-	public Product() {
-	}
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	public Product(Long id, String name,
-								 String description,
-								 BigDecimal price) {
-		setId(id);
-		this.name = name;
-		this.description = description;
-		this.price = price;
-	}
+    @Column(name = "name")
+    @NotNull
+    @NotEmpty
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = true)
+    private Category category;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    @Column(name = "description",length = 500)
+    @NotNull
+    @NotEmpty
+    private String description;
 
-	public String getDescription() {
-		return description;
-	}
+    @Column(name = "image")
+    private String imageUrl;
+    public String getImage_url(){
+        return imageUrl;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    @Column(name = "price")
+    @NotNull
+    private BigDecimal price;
 
-	public BigDecimal getPrice() {
-		return price;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
+        return id == product.getId();
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (!(o instanceof Product)) return false;
-		Product product = (Product) o;
-		return Objects.equals(getId(), product.getId());
-	}
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(getId());
-	}
 }
+

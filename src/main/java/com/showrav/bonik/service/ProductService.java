@@ -1,9 +1,15 @@
 package com.showrav.bonik.service;
 
-import com.showrav.bonik.dto.ProductDTO;
+import com.showrav.bonik.domain.Product;
 
 import java.util.List;
 
 public interface ProductService {
-    List<ProductDTO> findAllProductSortedByName();
+    void save(Product product);
+    void edit(long id, Product newProduct);
+    void delete(long id);
+    Product findById(long id);
+    List<Product> findAllByOrderByIdAsc();
+    List<Product> findAllByCategoryId(long categoryId);
+    long count();
 }

@@ -1,66 +1,60 @@
 package com.showrav.bonik.domain;
 
-import java.util.Objects;
+import lombok.Data;
 
-public class User extends Domain {
-	private String username;
-	private String password;
-	private String email;
-	private String firstName;
-	private String lastName;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
-	public String getUsername() {
-		return username;
-	}
+@Data
+@Entity
+@Table(name = "user")
+public class User {
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	public String getPassword() {
-		return password;
-	}
+    @Column(name = "username", unique = true)
+    @NotEmpty
+    @NotNull
+    private String username;
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    @Column(name = "email", unique = true)
+    @Email
+    @NotEmpty
+    @NotNull
+    private String email;
 
-	public String getEmail() {
-		return email;
-	}
+    @NotEmpty
+    @NotNull
+    private String password;
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    @NotEmpty
+    @NotNull
+    private String passwordConfirm;
 
-	public String getFirstName() {
-		return firstName;
-	}
+    @Column(name = "first_name")
+    private String firstName;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    @Column(name = "last_name")
+    private String lastName;
 
-	public String getLastName() {
-		return lastName;
-	}
+    @Column(name = "age")
+    private int age;
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    @Column(name = "city")
+    private String city;
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		User user = (User) o;
+    @Column(name = "gender")
+    @NotEmpty
+    @NotNull
+    private String gender;
 
-		return username.equals(user.username);
-	}
+    @Column(name = "balance")
+    private BigDecimal balance;
 
-	@Override
-	public int hashCode() {
-
-		return Objects.hash(username);
-	}
 }
