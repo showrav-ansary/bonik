@@ -29,6 +29,7 @@ public class CartServiceImplTest {
 	@Rule
 	public ExpectedException exception = ExpectedException.none();
 
+	@Mock
 	private CartService cartService;
 
 	@Mock
@@ -40,7 +41,10 @@ public class CartServiceImplTest {
 	@Mock
 	private CartItemRepository cartItemRepository;
 
+	@Mock
 	private User testUser;
+
+	@Mock
 	private Cart cart;
 
 	private static final Product TEST_PRODUCT
