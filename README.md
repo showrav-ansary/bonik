@@ -1,6 +1,7 @@
 # Bonik - An E-Commerce Webapp
 ---
-This project is designed in repo pattern. The concern of business logics are separated.
+This project is designed in repo pattern. The concern of business logics are separated. 
+(Still incomplete and buggy. Will complete when I get the chance!)
 
 ## Creator
 A. A. Noman Ansary
